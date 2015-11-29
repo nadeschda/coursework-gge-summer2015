@@ -80,8 +80,8 @@ F: Draw branch, move to its top
 A tree is composed of branches and leaves. By default, the tree is generated and rendered as a bare tree. The leaves can be toggled on/off using the `Control Panel` which is a user interface created
 with the [controlP5 Library](http://www.sojamo.de/libraries/controlP5/).
 
-A branch is represented by a cylindrical `PShape` object drawn using `QUAD_STRIP`s. I used the code from the [Processing shader tutorial](https://processing.org/tutorials/pshader/) to generate the geometry. A noise-generated texture is applied to give the shape the color pattern and look of a bark. The following images are examples of textures generated with the `noise()` function.
-The left one (a combination of `noise()` and `sin()`) provides an interesting pattern which unfortunately loses its appeal when applied to the geometry - hence, the image on the right represents the kind of texture that is applied - note that each time the program starts, the texture is newly calculated. In the applied shader the texture is sampled and the final color and simple lighting (based on the 'Processing shader tutorial') is calculated.
+A branch is represented by a cylindrical `PShape` object and it is drawn using `QUAD_STRIP`s. I followed the example from the [Processing shader tutorial](https://processing.org/tutorials/pshader/) to generate the geometry. A noise-generated texture is applied to give the shape the color pattern and look of a bark. The following images are examples of textures generated with the `noise()` function.
+The left one (a combination of `noise()` and `sin()`) provides an interesting pattern which unfortunately loses its appeal when applied to the geometry - hence, the image on the right represents the kind of texture that is applied - note that each time the program starts, the texture is newly calculated. In the applied shader the texture is sampled and the final color and simple lighting (based on the [Processing shader tutorial](https://processing.org/tutorials/pshader/)) is calculated.
 <br />
 
 <div class="almost-centering">
@@ -106,7 +106,7 @@ In the vertex shader the applied texture is used to calculate the terrain's heig
 <br />
 
 ##### Sky
-In order to give the scene a decent background I use a textured spherical `PShape` object, which is rendered with disabled depth test in order to imitate horizon and sky. The "skysphere" is then centered at the camera's position so that camera and scene are inside the sphere and the user will always look at the horizon of the scene. The sky is colored as a nighttime sky with small ellipses rendered to the texture representing stars. My intention to also include (animated) clouds in the final scene didn't work out because applied to the sphere the noise-generated clouds resulted in odd looking artefacts. However, to demonstrate one of the resulting textures, the following image shows an example with color interpolation, stars ellipsoidal stars and noise-generated clouds.
+In order to give the scene a decent background I use a textured spherical `PShape` object, which is rendered with [disabled zbuffer](http://processing.github.io/processing-javadocs/core/) using the method `hint(DISABLE_DEPTH_TEST)` in order to imitate horizon and sky. The "skysphere" is then centered at the camera's position so that camera and scene are inside the sphere and the user will always look at the horizon of the scene. The sky is colored as a nighttime sky with small ellipses rendered to the texture representing stars. My intention to also include (animated) clouds in the final scene didn't work out because applied to the sphere the noise-generated clouds resulted in odd looking artefacts. However, to demonstrate one of the resulting textures, the following image shows an example with color interpolation, stars ellipsoidal stars and noise-generated clouds.
 
 <br />
 
