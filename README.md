@@ -1,20 +1,3 @@
-<style>
-.centering {
-    display: block;
-    margin-top: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    }
-.almost-centering {
-    margin-left: 30%;
-    margin-right: auto;
-}
-.spacing {
-    margin: 1%;
-}
-.
-</style>
-
 # Generating a tree using an L-system
 
 This project is the final exercise and assignment I did for completing the university course
@@ -66,7 +49,7 @@ An L-system (aka _Lindenmayer-system_, named for Aristid Lindenmayer, a botanist
 ruleset. The result of such a procedure will be a different and most typically a much longer sentence. Therefore, L-systems can be used for modelling the growth of biological structures.
 
 For example, given the axiom `b` and two productions `P1` and `P2`, with
-`P1 = a -> ab` and `P2 = b -> a`.
+`P1=a->ab` and `P2=b->a`.
 After 5 iterations we will get the following result:
 ```
      b
@@ -132,8 +115,10 @@ In order to give the scene a decent background I use a textured spherical `PShap
 <br />  
 
 ##### Camera
-The camera is implemented based on the examples and tutorials provided during the lectures. Main functionalities include modifying the camer's `y` - position and rotating the camera around the scene with the rotation radius and speed being adjustable via the control panel.
+The camera is implemented based on the examples and tutorials provided during the lectures. Main functionalities include modifying the camer's `y` - position and rotating the camera around the scene with the rotation radius and speed being adjustable via the control panel.  
+
 <br />
+
 
 ##### Lighting
 There is no complex lighting calculation in the scene. Most of the implemented lighting is based on the [Processing shader tutorial](https://processing.org/tutorials/pshader/).
