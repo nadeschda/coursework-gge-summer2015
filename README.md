@@ -49,7 +49,7 @@ An L-system (aka _Lindenmayer-system_, named for Aristid Lindenmayer, a botanist
 ruleset. The result of such a procedure will be a different and most typically a much longer sentence. Therefore, L-systems can be used for modelling the growth of biological structures.
 
 For example, given the axiom `b` and two productions `P1` and `P2`, with
-`P1=a->ab` and `P2=b->a`.
+`P1=a->ab` and `P2=b->a`.  
 After 5 iterations we will get the following result:
 ```
      b
@@ -58,8 +58,8 @@ After 5 iterations we will get the following result:
    a b a
  a b a a b
 ```
-And finally, in order to generate the geometry of a plant or a tree, the characters need to be interpreted graphically.  
-
+In order to finally generate the geometry of a plant or a tree, the characters need to be interpreted graphically.  
+<br />
 The L-system I ended up with is composed of the following symbols and commands for graphical interpretation:  
 ```
 F: Draw branch, move to its top
