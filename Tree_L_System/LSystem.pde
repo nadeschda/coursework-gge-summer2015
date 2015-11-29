@@ -1,13 +1,13 @@
 /**
  * LSystem
- * 
+ *
  * A class for a string-rewriting mechanism.
  *
- * An Lystem object consists of a starting sentence, called the axiom.
+ * An L-system object consists of a starting sentence, called the axiom.
  * It also has a set of production rules which are instructions for rewriting
  * the given axiom. These productions or rewriting rules are applied iteratively
- * so that each generation recursively replaces characters according to the 
- * ruleset. 
+ * so that each generation recursively replaces characters according to the
+ * ruleset.
  * For example, given the axiom "b" and two productions p_1 and p_2, with
  * p_1 = a -> ab and p_2 = b -> a.
  * After 5 iterations we will get the following result:
@@ -33,8 +33,8 @@ class LSystem {
   // The turtle follows the rules and interprets them graphically.
   Turtle turtle;
 
-  // We construct an LSystem with an axiom (i.e. an initial sentence), a set of 
-  // productions to be applied and a turtle. 
+  // We construct an LSystem with an axiom (i.e. an initial sentence), a set of
+  // productions to be applied and a turtle.
   LSystem(String a, Production[] p, Turtle t) {
     axiom = a;
     productions = p;
@@ -123,4 +123,3 @@ class LSystem {
     return generation;
   }
 }
-
