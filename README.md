@@ -12,7 +12,7 @@ For the final assignment we were asked to meet the following general requirement
 Since I wanted to learn more about fractals and L-systems, I decided to create a scene of generated plants or trees. We were allowed to use the programming language of our choice for the final project - I chose [Processing](https://processing.org/) (Version 2.2.1) as well as [OpenGL Shading Language (GLSL)](https://www.opengl.org/documentation/glsl/), since we were learning Processing and GLSL throughout the lectures and the preceding exercises.
 
 There are a lot of 2D examples for generating structures that closely resemble trees or bushes using fractals or L-systems, such as Daniel Shiffman's Processing example [Recursive Tree](https://processing.org/examples/tree.html). In his book, [The Nature Of Code](http://natureofcode.com/book/chapter-8-fractals/), Daniel Shiffman dedicates an entire chapter to fractals and L-systems. I used his implementation of a 2D L-system as a starting point for generating a tree in 3D with Processing und OpenGL.  
-<br/ >
+<br />
 Further references include  
 + Prusinkiewicz P. and Lindenmayer A. (1990). [_The Algorithmic Beauty Of Plants._](http://algorithmicbotany.org/papers/#abop). Springer, New York.
 + Ebert, Musgrave et al. (2003). _Texturing and Modeling. A Procedural Approach._ Morgan Kaufmann Publishers Inc., Third edition.
@@ -21,6 +21,7 @@ Further references include
 <br />
 Screenshots of the resulting work are provided below as well as some short notes about concepts and components.
 <br />
+
 ## Results
 The example of a ternary tree structure described in the aforementioned book _"Texturing and Modeling. A Procedural Approach."_ (page 310) serves as the model of the production rule used in the present Processing sketch. The tree is generated in 5 iterations with the following L-system (see below for an explanation of how an L-system works):
 ```
@@ -44,6 +45,7 @@ The initial branching angle is `23.5°`.
 </div>
 
 <br />
+
 ##### L-System
 An L-system (aka _Lindenmayer-system_, named for Aristid Lindenmayer, a botanist and biologist) is a formal system defining a string-rewriting mechanism. An L-system consists of a starting sentence (composed of one or more characters), called the axiom. It also has a set of production rules which are instructions for rewriting the given axiom. These productions or rewriting rules are applied iteratively so that each generation recursively replaces characters according to the
 ruleset. The result of such a procedure will be a different and most typically a much longer sentence. Therefore, L-systems can be used for modelling the growth of biological structures.
@@ -95,6 +97,7 @@ A leaf is also represented by a `PShape` object. For drawing the shape of a leaf
 <img class ="centering" src="screenshots/leaf_leaves.png" alt="leaves">
 
 <br />
+
 ##### Terrain
 Furthermore, the rendered scene includes a noise-generated terrain
 (mainly following the examples and tutorials from the lecture), created as a `QUAD` mesh.
